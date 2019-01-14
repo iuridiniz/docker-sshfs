@@ -12,7 +12,7 @@ trap cleanup SIGHUP SIGINT SIGQUIT SIGABRT SIGTERM
 cleanup() {
   echo -n "Caught signal. Cleaning up now... "
   sync
-  umount -vl /mount
+  umount -v /mount
   echo "Done!"
   exit 0
 }
